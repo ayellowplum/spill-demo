@@ -1,0 +1,5 @@
+Spill, pre-alpha prototype demo. Copyright (c) ayellowplum 2026. All rights reserved.
+
+You may: play this demo, and record and share videos, streams and screenshots of it.
+You may not: copy, redistribute or host this build, or extract and reuse its code, art, music or sound, in this or any other project, without written permission.
+This is an unfinished prototype provided as is, with no warranty.
