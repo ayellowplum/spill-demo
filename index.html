@@ -11,10 +11,11 @@
   #gl { image-rendering: pixelated; }
   #hud { pointer-events: none; }
   body { cursor: default; user-select: none; -webkit-user-select: none; }
-  #ks { position: fixed; right: 18px; bottom: 18px; z-index: 20; display: flex; align-items: center; gap: 9px; padding: 9px 15px 9px 12px;
-        background: linear-gradient(#17120f, #0c0a0d); border: 1px solid #5a4630; box-shadow: 0 0 0 1px #0a0809, 0 6px 18px rgba(0,0,0,.55), inset 0 1px 0 rgba(201,165,90,.18);
+  #ks { position: fixed; right: 18px; bottom: 18px; z-index: 20; display: flex; align-items: center; gap: 9px;
+        border-radius: 999px; padding: 10px 18px 10px 14px;
+        background: linear-gradient(#1a1410, #0e0b0d); border: 1px solid rgba(201,165,90,.35); box-shadow: 0 6px 20px rgba(0,0,0,.5), inset 0 1px 0 rgba(201,165,90,.12);
         color: #e2cfa6; font: 14px/1 Georgia, serif; letter-spacing: .04em; text-decoration: none; transition: opacity .3s, border-color .2s, transform .2s; }
-  #ks:hover { border-color: #c9a55a; transform: translateY(-1px); }
+  #ks:hover { border-color: rgba(201,165,90,.8); transform: translateY(-1px); }
   #ks svg { width: 18px; height: 18px; flex: none; }
   #ks.play { opacity: .45; }
   #ks.play:hover { opacity: 1; }
@@ -61,6 +62,6 @@
   <script src="src/hallart.js"></script>
   <script src="src/interactive.js"></script>
   <script src="src/game.js?v=4"></script>
-  <script src="demo.js?v=6"></script>
+  <script src="demo.js?v=7"></script>
 </body>
 </html>
