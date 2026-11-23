@@ -11,14 +11,13 @@
   #gl { image-rendering: pixelated; }
   #hud { pointer-events: none; }
   body { cursor: default; user-select: none; -webkit-user-select: none; }
-  #ks { position: fixed; right: 20px; bottom: 20px; z-index: 20; width: 222px; padding: 10px 10px 8px; background: rgba(7, 6, 11, 0.88);
-        border: 1px solid #3a2f26; color: #c9b597; font: 13px/1.4 Georgia, serif; text-align: center; transition: opacity .4s; }
-  #ks.gone { opacity: 0; pointer-events: none; }
-  #ks .lbl { letter-spacing: .18em; text-transform: uppercase; font-size: 11px; color: #c9a55a; margin: 0 0 8px; }
-  #ks iframe { display: block; width: 220px; height: 392px; border: 0; margin: 0 auto; background: #07060b; }
-  #ks a { color: #c9a55a; }
-  #ks .x { position: absolute; top: 4px; right: 8px; color: #6e6152; cursor: pointer; font-size: 14px; }
-  @media (max-height: 640px) { #ks iframe { display: none; } }
+  #ks { position: fixed; right: 18px; bottom: 18px; z-index: 20; display: flex; align-items: center; gap: 9px; padding: 9px 15px 9px 12px;
+        background: linear-gradient(#17120f, #0c0a0d); border: 1px solid #5a4630; box-shadow: 0 0 0 1px #0a0809, 0 6px 18px rgba(0,0,0,.55), inset 0 1px 0 rgba(201,165,90,.18);
+        color: #e2cfa6; font: 14px/1 Georgia, serif; letter-spacing: .04em; text-decoration: none; transition: opacity .3s, border-color .2s, transform .2s; }
+  #ks:hover { border-color: #c9a55a; transform: translateY(-1px); }
+  #ks svg { width: 18px; height: 18px; flex: none; }
+  #ks.play { opacity: .45; }
+  #ks.play:hover { opacity: 1; }
   #small a { color: #c9a55a; }
   #small { display: none; }
   @media (max-width: 700px), (pointer: coarse) and (hover: none) { #small { display: grid; place-items: center; position: fixed; inset: 0; z-index: 30; background: #07060b;
@@ -29,12 +28,10 @@
   <canvas id="gl"></canvas>
   <canvas id="hud"></canvas>
   <div id="small"><div>Spill needs a desktop browser with a mouse and keyboard.<br><br><a href="https://www.kickstarter.com/projects/spill-game/spill-a-new-metroidvania" target="_blank" rel="noopener">Spill is on Kickstarter</a></div></div>
-  <div id="ks">
-    <span class="x" title="Hide" onclick="this.parentNode.classList.add('gone')">&times;</span>
-    <p class="lbl">Live on Kickstarter</p>
-    <iframe src="https://www.kickstarter.com/projects/spill-game/spill-a-new-metroidvania/widget/card.html?v=2" title="Spill on Kickstarter" loading="lazy" scrolling="no"></iframe>
-    <a href="https://www.kickstarter.com/projects/spill-game/spill-a-new-metroidvania" target="_blank" rel="noopener">Back the full game</a>
-  </div>
+  <a id="ks" href="https://www.kickstarter.com/projects/spill-game/spill-a-new-metroidvania" target="_blank" rel="noopener">
+    <svg viewBox="0 0 18 18" aria-hidden="true" shape-rendering="crispEdges"><path fill="#c9a55a" d="M8 3h2v1H8zM7 6h4v1H7zM6 9h6v1H6zM4 12h10v1H4zM2 14h14v2H2z"/><path fill="#8a6a36" d="M9 4h1v2H9zM8 7h1v2H8zM10 10h1v2h-1z"/></svg>
+    Support Spill on Kickstarter
+  </a>
   <script src="src/fonts.js"></script>
   <script src="src/detail.js"></script>
   <script src="src/impacts.js"></script>
@@ -64,6 +61,6 @@
   <script src="src/hallart.js"></script>
   <script src="src/interactive.js"></script>
   <script src="src/game.js?v=4"></script>
-  <script src="demo.js?v=5"></script>
+  <script src="demo.js?v=6"></script>
 </body>
 </html>
